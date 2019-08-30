@@ -1,6 +1,20 @@
+sudo: false
 language: ruby
-dist: bionic
-sudo: required
-
 rvm:
   - 2.6.3
+
+env:
+  - DB=postgresql
+
+addons:
+  postgresql: "9.5"
+
+script:
+  - RAILS_ENV=test bundle exec rake db:migrate --trace
+  - bundle exec rake db:test:prepare
+  - bundle exec rspec spec/
+
+before_script:
+  - psql -c 'create database restaurants_nearby_test;' -U postgres
+
+bundler_args: --binstubs=./bundler_stubs
