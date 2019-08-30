@@ -1,6 +1,10 @@
+sudo: false
 language: ruby
-dist: bionic
-sudo: required
-
 rvm:
   - 2.6.3
+
+script:
+- bundle exec rspec .
+
+bundler_args: --binstubs=./bundler_stubs
+before_install: gem install bundler
