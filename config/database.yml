@@ -5,15 +5,15 @@ default: &default
 
 development:
   <<: *default
-  database: restaurants-nearby_development
+  database: restaurants_nearby_development
 
 test:
   <<: *default
-  database: restaurants-nearby_test
+  database: restaurants_nearby_test
 
 production:
   <<: *default
   username: postgres
   host: db
-  database: restaurants-nearby_production
+  database: restaurants_nearby_production
   password: 
