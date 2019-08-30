@@ -1,0 +1,6 @@
+language: ruby
+dist: bionic
+sudo: required
+
+rvm:
+  - 2.6.3

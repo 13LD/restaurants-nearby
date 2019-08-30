@@ -1,0 +1,47 @@
+# See https://help.github.com/articles/ignoring-files for more about ignoring files.
+# Ignore bundler config.
+/.bundle
+
+# Ignore the default SQLite database.
+/db/*.sqlite3
+/db/*.sqlite3-journal
+
+# Ignore all logfiles and tempfiles.
+/log/*
+/tmp/*
+!/log/.keep
+!/tmp/.keep
+
+# Ignore uploaded files in development
+/storage/*
+!/storage/.keep
+
+/public/assets
+.byebug_history
+
+### Additional to Rails defaults ###
+
+# MacOS files
+.DS_Store
+.AppleDouble
+.LSOverride
+._*
+.Spotlight-V100
+.Trashes
+
+*.rbc
+*.sassc
+.sass-cache
+/spec/examples.txt
+
+/public/system/*
+/public/uploads/*
+/spec/tmp/*
+**.orig
+.idea
+.vscode
+.tags*
+# Ignore application configuration
+.env*
+!.env.example
+/coverage
